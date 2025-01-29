@@ -31,6 +31,18 @@
       "url": "api-reference"
     }
   ],
+  "versions": [
+    {
+      "name": "v3.x",
+      "default": true
+    },
+    {
+      "name": "v2.x"
+    },
+    {
+      "name": "v1.x"
+    }
+  ],
   "anchors": [
     {
       "name": "Documentation",
@@ -75,11 +87,288 @@
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Auth Service",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        {
+          "group": "v1",
+          "pages": [
+          "api-reference/authv1/retrieve-openid-connect-well-knowns",
+          "api-reference/authv1/get-server-info",
+          "api-reference/authv1/list-clients",
+          "api-reference/authv1/create-client",
+          "api-reference/authv1/read-client",
+          "api-reference/authv1/update-client",
+          "api-reference/authv1/delete-client",
+          "api-reference/authv1/add-a-secret-to-a-client",
+          "api-reference/authv1/delete-a-secret-from-a-client",
+          "api-reference/authv1/list-users",
+          "api-reference/authv1/read-user"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Ledger Service",
+      "pages": [
+        {
+          "group": "v1",
+          "pages": [
+            "api-reference/ledgerv1/show-server-information",
+            "api-reference/ledgerv1/get-information-about-a-ledger",
+            "api-reference/ledgerv1/list-accounts-from-a-ledger",
+            "api-reference/ledgerv1/count-the-accounts-from-a-ledger",
+            "api-reference/ledgerv1/get-account-by-its-address",
+            "api-reference/ledgerv1/add-metadata-to-an-account",
+            "api-reference/ledgerv1/get-the-mapping-of-a-ledger",
+            "api-reference/ledgerv1/update-the-mapping-of-a-ledger",
+            "api-reference/ledgerv1/execute-a-numscript",
+            "api-reference/ledgerv1/get-statistics-from-a-ledger",
+            "api-reference/ledgerv1/list-transactions-from-a-ledger",
+            "api-reference/ledgerv1/create-a-new-transaction-to-a-ledger",
+            "api-reference/ledgerv1/count-the-transactions-from-a-ledger",
+            "api-reference/ledgerv1/get-transaction-from-a-ledger-by-its-id",
+            "api-reference/ledgerv1/set-the-metadata-of-a-transaction-by-its-id",
+            "api-reference/ledgerv1/revert-a-ledger-transaction-by-its-id",
+            "api-reference/ledgerv1/create-a-new-batch-of-transactions-to-a-ledger",
+            "api-reference/ledgerv1/get-the-balances-from-a-ledgers-account",
+            "api-reference/ledgerv1/get-the-aggregated-balances-from-selected-accounts",
+            "api-reference/ledgerv1/list-the-logs-from-a-ledger"
+          ]
+        },
+        {
+          "group": "v2",
+          "pages": [
+            "api-reference/ledgerv2/list-ledgers",
+            "api-reference/ledgerv2/get-a-ledger",
+            "api-reference/ledgerv2/create-a-ledger",
+            "api-reference/ledgerv2/update-ledger-metadata",
+            "api-reference/ledgerv2/delete-ledger-metadata-by-key",
+            "api-reference/ledgerv2/get-information-about-a-ledger",
+            "api-reference/ledgerv2/bulk-request",
+            "api-reference/ledgerv2/list-accounts-from-a-ledger",
+            "api-reference/ledgerv2/count-the-accounts-from-a-ledger",
+            "api-reference/ledgerv2/get-account-by-its-address",
+            "api-reference/ledgerv2/add-metadata-to-an-account",
+            "api-reference/ledgerv2/delete-metadata-by-key",
+            "api-reference/ledgerv2/get-statistics-from-a-ledger",
+            "api-reference/ledgerv2/list-transactions-from-a-ledger",
+            "api-reference/ledgerv2/create-a-new-transaction-to-a-ledger",
+            "api-reference/ledgerv2/count-the-transactions-from-a-ledger",
+            "api-reference/ledgerv2/get-transaction-from-a-ledger-by-its-id",
+            "api-reference/ledgerv2/set-the-metadata-of-a-transaction-by-its-id",
+            "api-reference/ledgerv2/delete-metadata-by-key-1",
+            "api-reference/ledgerv2/revert-a-ledger-transaction-by-its-id",
+            "api-reference/ledgerv2/get-the-aggregated-balances-from-selected-accounts",
+            "api-reference/ledgerv2/get-list-of-volumes-with-balances-for-accountasset",
+            "api-reference/ledgerv2/list-the-logs-from-a-ledger",
+            "api-reference/ledgerv2/post-apiledgerv2-logsimport",
+            "api-reference/ledgerv2/export-logs"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Payments Service",
+      "pages": [
+        {
+          "group": "v1",
+          "pages": [
+            "api-reference/paymentsv1/get-server-info",
+            "api-reference/paymentsv1/list-payments",
+            "api-reference/paymentsv1/create-a-payment",
+            "api-reference/paymentsv1/get-a-payment",
+            "api-reference/paymentsv1/update-metadata",
+            "api-reference/paymentsv1/list-transfer-initiations",
+            "api-reference/paymentsv1/create-a-transferinitiation",
+            "api-reference/paymentsv1/get-a-transfer-initiation",
+            "api-reference/paymentsv1/delete-a-transfer-initiation",
+            "api-reference/paymentsv1/update-the-status-of-a-transfer-initiation",
+            "api-reference/paymentsv1/reverse-a-transfer-initiation",
+            "api-reference/paymentsv1/retry-a-failed-transfer-initiation",
+            "api-reference/paymentsv1/list-pools",
+            "api-reference/paymentsv1/create-a-pool",
+            "api-reference/paymentsv1/get-a-pool",
+            "api-reference/paymentsv1/delete-a-pool",
+            "api-reference/paymentsv1/add-an-account-to-a-pool",
+            "api-reference/paymentsv1/remove-an-account-from-a-pool",
+            "api-reference/paymentsv1/get-pool-balances",
+            "api-reference/paymentsv1/list-accounts",
+            "api-reference/paymentsv1/create-an-account",
+            "api-reference/paymentsv1/get-an-account",
+            "api-reference/paymentsv1/get-account-balances",
+            "api-reference/paymentsv1/list-bank-accounts-created-by-user-on-formance",
+            "api-reference/paymentsv1/create-a-bankaccount-in-payments-and-on-the-psp",
+            "api-reference/paymentsv1/get-a-bank-account-created-by-user-on-formance",
+            "api-reference/paymentsv1/forward-a-bank-account-to-a-connector",
+            "api-reference/paymentsv1/update-metadata-of-a-bank-account",
+            "api-reference/paymentsv1/list-all-installed-connectors",
+            "api-reference/paymentsv1/list-the-configs-of-each-available-connector",
+            "api-reference/paymentsv1/install-a-connector",
+            "api-reference/paymentsv1/uninstall-a-connector",
+            "api-reference/paymentsv1/uninstall-a-connector-1",
+            "api-reference/paymentsv1/read-the-config-of-a-connector",
+            "api-reference/paymentsv1/read-the-config-of-a-connector-1",
+            "api-reference/paymentsv1/update-the-config-of-a-connector",
+            "api-reference/paymentsv1/reset-a-connector",
+            "api-reference/paymentsv1/reset-a-connector-1",
+            "api-reference/paymentsv1/list-tasks-from-a-connector",
+            "api-reference/paymentsv1/list-tasks-from-a-connector-1",
+            "api-reference/paymentsv1/read-a-specific-task-of-the-connector",
+            "api-reference/paymentsv1/read-a-specific-task-of-the-connector-1",
+            "api-reference/paymentsv1/transfer-funds-between-connector-accounts"
+          ]
+        },
+        {
+          "group": "v3",
+          "pages": [
+            "api-reference/paymentsv3/show-server-information",
+            "api-reference/paymentsv3/list-all-accounts",
+            "api-reference/paymentsv3/create-a-formance-account-object-this-object-will-not-be-forwarded-to-the-connector-it-is-only-used-for-internal-purposes",
+            "api-reference/paymentsv3/get-an-account-by-id",
+            "api-reference/paymentsv3/get-account-balances",
+            "api-reference/paymentsv3/list-all-bank-accounts",
+            "api-reference/paymentsv3/create-a-formance-bank-account-object-this-object-will-not-be-forwarded-to-the-connector-until-you-called-the-forwardbankaccount-method",
+            "api-reference/paymentsv3/get-a-bank-account-by-id",
+            "api-reference/paymentsv3/update-a-bank-accounts-metadata",
+            "api-reference/paymentsv3/forward-a-bank-account-to-a-psp-for-creation",
+            "api-reference/paymentsv3/list-all-connectors",
+            "api-reference/paymentsv3/install-a-connector",
+            "api-reference/paymentsv3/list-all-connector-configurations",
+            "api-reference/paymentsv3/uninstall-a-connector",
+            "api-reference/paymentsv3/get-a-connector-configuration-by-id",
+            "api-reference/paymentsv3/reset-a-connector-be-aware-that-this-will-delete-all-data-and-stop-all-existing-tasks-like-payment-initiations-and-bank-account-creations",
+            "api-reference/paymentsv3/list-all-connector-schedules",
+            "api-reference/paymentsv3/list-all-connector-schedule-instances",
+            "api-reference/paymentsv3/list-all-payments",
+            "api-reference/paymentsv3/create-a-formance-payment-object-this-object-will-not-be-forwarded-to-the-connector-it-is-only-used-for-internal-purposes",
+            "api-reference/paymentsv3/get-a-payment-by-id",
+            "api-reference/paymentsv3/update-a-payments-metadata",
+            "api-reference/paymentsv3/list-all-payment-initiations",
+            "api-reference/paymentsv3/initiate-a-payment",
+            "api-reference/paymentsv3/get-a-payment-initiation-by-id",
+            "api-reference/paymentsv3/delete-a-payment-initiation-by-id",
+            "api-reference/paymentsv3/retry-a-payment-initiation",
+            "api-reference/paymentsv3/approve-a-payment-initiation",
+            "api-reference/paymentsv3/reject-a-payment-initiation",
+            "api-reference/paymentsv3/reverse-a-payment-initiation",
+            "api-reference/paymentsv3/list-all-payment-initiation-adjustments",
+            "api-reference/paymentsv3/list-all-payments-related-to-a-payment-initiation",
+            "api-reference/paymentsv3/list-all-pools",
+            "api-reference/paymentsv3/create-a-formance-pool-object",
+            "api-reference/paymentsv3/get-a-pool-by-id",
+            "api-reference/paymentsv3/delete-a-pool-by-id",
+            "api-reference/paymentsv3/get-pool-balances",
+            "api-reference/paymentsv3/add-an-account-to-a-pool",
+            "api-reference/paymentsv3/remove-an-account-from-a-pool",
+            "api-reference/paymentsv3/get-a-task-and-its-result-by-id"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Wallets Service",
+      "pages": [
+        {
+          "group": "v1",
+          "pages": [
+            "api-reference/walletsv1/get-server-info",
+            "api-reference/walletsv1/get-apiwalletstransactions",
+            "api-reference/walletsv1/list-all-wallets",
+            "api-reference/walletsv1/create-a-new-wallet",
+            "api-reference/walletsv1/get-a-wallet",
+            "api-reference/walletsv1/update-a-wallet",
+            "api-reference/walletsv1/get-wallet-summary",
+            "api-reference/walletsv1/list-balances-of-a-wallet",
+            "api-reference/walletsv1/create-a-balance",
+            "api-reference/walletsv1/get-detailed-balance",
+            "api-reference/walletsv1/debit-a-wallet",
+            "api-reference/walletsv1/credit-a-wallet",
+            "api-reference/walletsv1/get-all-holds-for-a-wallet",
+            "api-reference/walletsv1/get-a-hold",
+            "api-reference/walletsv1/confirm-a-hold",
+            "api-reference/walletsv1/cancel-a-hold"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Flows Service",
+      "pages": [
+        {
+          "group": "v1",
+          "pages": [
+            "api-reference/orchestrationv1/get-server-info",
+            "api-reference/orchestrationv1/list-triggers",
+            "api-reference/orchestrationv1/create-trigger",
+            "api-reference/orchestrationv1/read-trigger",
+            "api-reference/orchestrationv1/delete-trigger",
+            "api-reference/orchestrationv1/list-triggers-occurrences",
+            "api-reference/orchestrationv1/list-registered-workflows",
+            "api-reference/orchestrationv1/create-workflow",
+            "api-reference/orchestrationv1/get-a-flow-by-id",
+            "api-reference/orchestrationv1/delete-a-flow-by-id",
+            "api-reference/orchestrationv1/run-workflow",
+            "api-reference/orchestrationv1/list-instances-of-a-workflow",
+            "api-reference/orchestrationv1/get-a-workflow-instance-by-id",
+            "api-reference/orchestrationv1/send-an-event-to-a-running-workflow",
+            "api-reference/orchestrationv1/cancel-a-running-workflow",
+            "api-reference/orchestrationv1/get-a-workflow-instance-history-by-id",
+            "api-reference/orchestrationv1/get-a-workflow-instance-stage-history"
+          ]
+        },
+        {
+          "group": "v2",
+          "pages": [
+            "api-reference/orchestrationv2/get-server-info",
+            "api-reference/orchestrationv2/list-triggers",
+            "api-reference/orchestrationv2/create-trigger",
+            "api-reference/orchestrationv2/read-trigger",
+            "api-reference/orchestrationv2/delete-trigger",
+            "api-reference/orchestrationv2/test-trigger",
+            "api-reference/orchestrationv2/list-triggers-occurrences",
+            "api-reference/orchestrationv2/list-registered-workflows",
+            "api-reference/orchestrationv2/create-workflow",
+            "api-reference/orchestrationv2/get-a-flow-by-id",
+            "api-reference/orchestrationv2/delete-a-flow-by-id",
+            "api-reference/orchestrationv2/run-workflow",
+            "api-reference/orchestrationv2/list-instances-of-a-workflow",
+            "api-reference/orchestrationv2/get-a-workflow-instance-by-id",
+            "api-reference/orchestrationv2/send-an-event-to-a-running-workflow",
+            "api-reference/orchestrationv2/cancel-a-running-workflow",
+            "api-reference/orchestrationv2/get-a-workflow-instance-history-by-id",
+            "api-reference/orchestrationv2/get-a-workflow-instance-stage-history"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Reconciliation Service",
+      "pages": [
+        {
+          "group": "v1",
+          "pages": [
+            "api-reference/reconciliationv1/get-server-info",
+            "api-reference/reconciliationv1/list-policies",
+            "api-reference/reconciliationv1/create-a-policy",
+            "api-reference/reconciliationv1/get-a-policy",
+            "api-reference/reconciliationv1/delete-a-policy",
+            "api-reference/reconciliationv1/reconcile-using-a-policy",
+            "api-reference/reconciliationv1/list-reconciliations",
+            "api-reference/reconciliationv1/get-a-reconciliation"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Search Service",
+      "pages": [
+        {
+          "group": "v1",
+          "pages": [
+            "api-reference/searchv1/get-server-info",
+            "api-reference/searchv1/searchv1"
+          ]
+        }
       ]
     }
   ],
